@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The_Tasty_Spoon</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<style>
+  /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ff7f50;
+    color: #fff;
+    padding: 1rem 2rem;
+}
+
+.navbar .logo h1 {
+    font-size: 1.8rem;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #333;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://t3.ftcdn.net/jpg/02/05/87/60/360_F_205876015_hYYs7ugqoU8QAobSS3TbnGQ92qyS5gEc.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.hero-text h2:hover {
+    color: chartreuse;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #ff7f50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.hero-text .btn:hover {
+    background: #e56739;
+}
+
+/* Features Section */
+.features {
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+}
+
+.features h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: brown;
+}
+
+.features h3:hover {
+    color: rgb(195, 27, 195);
+}
+
+.feature-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: lightblue;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card h4:hover {
+    color: deeppink;
+    transform: translateY(-5px);
+}
+.card p {
+    font-size: 1rem;
+    color:rgb(69, 65, 65);
+}
+
+.card p:hover {
+    color: blue;
+    background-color:seashell;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+</style>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>The_Tasty_Spoon</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/menu">Menu</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Delicious Meals Delivered Fast!</h2>
+                <p>Your favorite dishes just a click away.</p>
+                <a href="/menu" class="btn">Explore Menu</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <h3>Why Choose Us?</h3>
+            <div class="feature-cards">
+                <div class="card">
+                    <h4>Fresh Ingredients</h4>
+                    <p>We source the freshest ingredients for our dishes.</p>
+                </div>
+                <div class="card">
+                    <h4>Quick Delivery</h4>
+                    <p>Get your meals delivered in under 30 minutes.</p>
+                </div>
+                <div class="card">
+                    <h4>Affordable Prices</h4>
+                    <p>Enjoy quality meals at unbeatable prices.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; @2024 The_Tasty_Spoon. All rights reserved.</p>
+    </footer>
+</body>
+</html>

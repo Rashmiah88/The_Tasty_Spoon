@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title || 'Menu' %></title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Fonts */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+    padding: 1rem 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.navbar .logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.navbar .nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 2rem;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #e67e22;
+}
+
+/* Main Section */
+main {
+    padding: 2rem 0;
+}
+
+.menu {
+    background-color: #fff;
+    padding: 3rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.menu h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.menu p {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.menu-categories {
+    margin-top: 3rem;
+}
+
+.menu-categories h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    text-transform: uppercase;
+}
+
+/* Menu Category Styling */
+.menu-categories ul {
+    list-style-type: none;
+    margin-bottom: 2rem;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+/* Background Image */
+.menu-item[data-img] {
+    background-size: cover;
+    background-position: center;
+    height: 120px; /* Increased height */
+    width: 100%; /* Full width */
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item[data-img] span {
+    z-index: 2; /* Ensure text appears above the image */
+}
+
+/* Price Styling */
+.price {
+    font-weight: bold;
+    color: #e67e22;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links {
+        margin-top: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-categories {
+        margin-top: 2rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="/" class="logo">The_Tasty_Spoon</a>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/menu">Menu</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="menu">
+            <div class="container">
+                <h1>Our Menu</h1>
+                <p>Explore a wide range of delicious dishes made just for you.</p>
+
+                <div class="menu-categories">
+                    <h2>Starters</h2>
+                    <ul>
+                        <li class="menu-item starter" style="background-image: url('');">
+                            <span>Garlic Bread</span>
+                            <span class="price">$5.99</span>
+                        </li>
+                        
+                        <li class="menu-item starter" style="background-image: url('');" >
+                            <span>Bruschetta</span>
+                            <span class="price">$6.99</span>
+                        </li>
+                        <li class="menu-item starter" style="background-image: url('');">
+                            <span>Vegetable Pakora</span>
+                            <span class="price">$4.99</span>
+                        </li>
+                        <li class="menu-item starter" style="background-image: url('');">
+                            <span>Samosa</span>
+                            <span class="price">$3.99</span>
+                        </li>
+                    </ul>
+
+                    <h2>Main Courses</h2>
+                    <ul>
+                        <li class="menu-item main" style="background-image: url('');">
+                            <span>Grilled Salmon</span>
+                            <span class="price">$15.99</span>
+                        </li>
+                        <li class="menu-item main" style="background-image: url('');">
+                            <span>Spaghetti Carbonara</span>
+                            <span class="price">$12.99</span>
+                        </li>
+                        <li class="menu-item main" style="background-image: url('');">
+                            <span>Chicken Biryani</span>
+                            <span class="price">$14.99</span>
+                        </li>
+                        <li class="menu-item main" style="background-image: url('');">
+                            <span>Butter Chicken</span>
+                            <span class="price">$13.99</span>
+                        </li>
+                        <li class="menu-item main" style="background-image: url('');">
+                            <span>Palak Paneer</span>
+                            <span class="price">$11.99</span>
+                        </li>
+                        <li class="menu-item main" style="background-image: url('');">
+                            <span>Dal Tadka</span>
+                            <span class="price">$9.99</span>
+                        </li>
+                    </ul>
+
+                    <h2>Desserts</h2>
+                    <ul>
+                        <li class="menu-item dessert" style="background-image: url('');">
+                            <span>Chocolate Lava Cake</span>
+                            <span class="price">$7.99</span>
+                        </li>
+                        <li class="menu-item dessert" style="background-image: url('');">
+                            <span>Tiramisu</span>
+                            <span class="price">$6.99</span>
+                        </li>
+                        <li class="menu-item dessert" style="background-image: url('');">
+                            <span>Gulab Jamun</span>
+                            <span class="price">$5.99</span>
+                        </li>
+                        <li class="menu-item dessert" style="background-image: url('');">
+                            <span>Rasgulla</span>
+                            <span class="price">$4.99</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; @2024 The_Tasty_Spoon. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
